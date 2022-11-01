@@ -241,12 +241,10 @@ Now open `resources/js/app.js` add the following chunk of code:
                 .use(ZiggyVue, Ziggy)
                 .component("Link", Link)
                 .component("Head", Head)
-                .mixin({ methods: { route } })
+                .mixin({ methods: { route: window.route } })
                 .mount(el);
         },
     });
-
-
 
 What does this is to import Vue, Inertia, Inertia Progress and Ziggy and then create the Inertia App. We're also passing the `Link` and `Head` components as globals because we're going to use them a lot.
 
