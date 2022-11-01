@@ -21,7 +21,7 @@ createInertiaApp({
             .use(ZiggyVue, Ziggy)
             .component("Link", Link)
             .component("Head", Head)
-            .mixin({ methods: { route } })
+            .mixin({ methods: { route: window.route } })
             .mount(el);
     },
 });
